@@ -5,6 +5,8 @@ import { Stats } from '@/components/dashboard/Stats'
 import { Assistant } from '@/components/assistant/Assistant'
 import { TaskList } from '@/components/tasks/TaskList'
 import { FamilyList } from '@/components/family/FamilyList'
+import { Calendar } from '@/components/calendar/Calendar'
+import { Documents } from '@/components/documents/Documents'
 
 function Home() {
   return (
@@ -25,9 +27,9 @@ export default function App() {
         <main className="container mx-auto px-4 py-8 pb-24">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/calendar" element={<div>Calendar Page</div>} />
+            <Route path="/calendar" element={<Calendar />} />
             <Route path="/assistant" element={<Assistant />} />
-            <Route path="/docs" element={<div>Docs Page</div>} />
+            <Route path="/docs" element={<Documents />} />
             <Route path="/profile" element={<div>Profile Page</div>} />
           </Routes>
         </main>
