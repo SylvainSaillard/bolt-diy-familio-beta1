@@ -22,27 +22,27 @@ export function TaskList() {
 
   return (
     <div className="space-y-4">
-      <h2 className="text-xl font-semibold">Today's Tasks</h2>
+      <h2 className="text-lg font-semibold">Today's Tasks</h2>
       <div className="space-y-2">
         {tasks.map(task => (
-          <TaskItem key={task.id} task={task} />
+          <div 
+            key={task.id}
+            className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm"
+          >
+            <div className="flex items-center space-x-4">
+              <input 
+                type="checkbox" 
+                className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              />
+              <div>
+                <div className="font-medium">{task.title}</div>
+                <div className="text-sm text-gray-500">{task.assignee}</div>
+              </div>
+            </div>
+            <div className="text-sm text-gray-500">{task.time}</div>
+          </div>
         ))}
       </div>
-    </div>
-  )
-}
-
-function TaskItem({ task }: { task: any }) {
-  return (
-    <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
-      <div className="flex items-center space-x-4">
-        <input type="checkbox" className="rounded" />
-        <div>
-          <div className="font-medium">{task.title}</div>
-          <div className="text-sm text-gray-500">{task.assignee}</div>
-        </div>
-      </div>
-      <div className="text-sm text-gray-500">{task.time}</div>
     </div>
   )
 }

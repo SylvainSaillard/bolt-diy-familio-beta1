@@ -35,5 +35,5 @@ body {
 }
 
 .nav-item.active {
-  @apply text-primary-600;
+  @apply text-blue-600;
 }
