@@ -4,6 +4,7 @@ import { Navigation } from '@/components/layout/Navigation'
 import { Stats } from '@/components/dashboard/Stats'
 import { Assistant } from '@/components/assistant/Assistant'
 import { TaskList } from '@/components/tasks/TaskList'
+import { FamilyList } from '@/components/family/FamilyList'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Stats />
       <Assistant />
       <TaskList />
+      <FamilyList />
     </div>
   )
 }
